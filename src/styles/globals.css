@@ -4,3 +4,13 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+
+@layer base {
+  html {
+    @apply scheme-dark scroll-smooth;
+  }
+
+  body {
+    @apply bg-zinc-950 text-zinc-50 font-sans antialiased;
+  }
+}
