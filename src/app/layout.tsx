@@ -6,7 +6,9 @@ import { cn } from '@/utils/cn';
 export default function RootLayout({ children }: React.PropsWithChildren) {
     return (
         <html lang='en'>
-            <body className={cn([sans.variable, mono.variable])}>
+            <body className={cn(
+                sans.variable, mono.variable
+            )}>
                 {children}
             </body>
         </html>

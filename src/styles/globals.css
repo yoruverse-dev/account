@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/typography';
 
 @theme inline {
   --font-sans: var(--font-geist-sans);
@@ -10,7 +12,19 @@
     @apply scheme-dark scroll-smooth;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-zinc-50;
+  }
+
   body {
-    @apply bg-zinc-950 text-zinc-50 font-sans antialiased;
+    @apply bg-zinc-950 text-zinc-300 font-sans antialiased p-5 sm:p-10;
+  }
+
+  strong, a {
+    @apply font-semibold text-amber-200;
+  }
+
+  a {
+    @apply underline after:content-['_↗']
   }
 }
