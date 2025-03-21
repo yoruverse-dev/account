@@ -1,14 +1,16 @@
-import { createClient } from '@/services/supabase/server';
+'use client';
 
-export default async function Home() {
-    const supabase = await createClient();
-    const { data: { user } } = await supabase.auth.getUser();
+import { useUser } from '@/context/userContext';
+
+export default function Home() {
+
+    const { user } = useUser();
 
     return (
         <main>
             {user && (
                 <p>
-                    Hello {user.email}!
+                    Hello {user.full_name}!
                 </p>
             )}
         </main>

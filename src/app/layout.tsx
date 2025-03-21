@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 import { sans, mono } from '@/styles/fonts';
 
 import { cn } from '@/utils/cn';
+import { UserProvider } from '@/context/userContext';
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
     return (
@@ -9,7 +10,9 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
             <body className={cn(
                 sans.variable, mono.variable
             )}>
-                {children}
+                <UserProvider>
+                    {children}
+                </UserProvider>
             </body>
         </html>
     );
