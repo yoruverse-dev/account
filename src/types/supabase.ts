@@ -7,7 +7,7 @@ export type Json =
   | Json[]
 
 export type Database = {
-  sso: {
+  account: {
     Tables: {
       profiles: {
         Row: {
@@ -17,7 +17,7 @@ export type Database = {
           id: string
           updated_at: string | null
           username: string | null
-          visibility: Database['sso']['Enums']['profile_visibility']
+          visibility: Database['account']['Enums']['profile_visibility']
         }
         Insert: {
           avatar_url?: string | null
@@ -26,7 +26,7 @@ export type Database = {
           id: string
           updated_at?: string | null
           username?: string | null
-          visibility?: Database['sso']['Enums']['profile_visibility']
+          visibility?: Database['account']['Enums']['profile_visibility']
         }
         Update: {
           avatar_url?: string | null
@@ -35,7 +35,7 @@ export type Database = {
           id?: string
           updated_at?: string | null
           username?: string | null
-          visibility?: Database['sso']['Enums']['profile_visibility']
+          visibility?: Database['account']['Enums']['profile_visibility']
         }
         Relationships: []
       }

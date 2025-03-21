@@ -1,5 +1,5 @@
 {
-  "name": "sso",
+  "name": "account",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "gen:types": "supabase gen types typescript --linked -s sso > ./src/types/supabase.ts"
+    "gen:types": "supabase gen types typescript --linked -s account > ./src/types/supabase.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.6.1",
