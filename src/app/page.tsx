@@ -1,18 +1,16 @@
-import Link from 'next/link';
+import { createClient } from '@/services/supabase/server';
 
-export default function Home() {
+export default async function Home() {
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+
     return (
         <main>
-            <h1>
-                Hello Next.js 13.4!
-            </h1>
-            <p>
-                Hello <strong>World!</strong>
-            </p>
-            <p>
-                This is a link {' '}
-                <Link href='/about'>About</Link>
-            </p>
+            {user && (
+                <p>
+                    Hello {user.email}!
+                </p>
+            )}
         </main>
     );
 }
