@@ -4,5 +4,7 @@ import { createClient } from '@/services/supabase/server';
 
 export async function getUser() {
     const supabase = await createClient();
-    return await supabase.from('profiles').select('*').single();
+    const { data, error } = await supabase.auth.getUser();
+    if (error) return { error };
+    return await supabase.from('profiles').select('*').eq('id', data.user.id).single();
 }

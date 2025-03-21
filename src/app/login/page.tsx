@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Login() {
     return (
-        <main className='flex h-screen items-center justify-center'>
+        <main className='flex h-dvh items-center justify-center p-10'>
             <section className='max-w-md w-full text-center'>
                 <YoruverseIcon className='mx-auto mb-5 size-10' />
                 <h1 className='text-3xl font-bold text-zinc-50'>
