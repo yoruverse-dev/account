@@ -1,6 +1,6 @@
 'use client';
 
-import { signWithWithOAuth } from '@/actions/login';
+import { signWithWithOAuth } from '@/actions/continue';
 import { Button } from '@/components/button';
 import { DiscordIcon, GitHubIcon, TwitchIcon } from '@/components/icons';
 

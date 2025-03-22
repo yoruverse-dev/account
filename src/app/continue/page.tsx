@@ -1,8 +1,8 @@
 import { YoruverseIcon } from '@/components/icons';
-import { SocialButtons } from '@/components/login/socialButtons';
+import { SocialButtons } from '@/components/continue/socialButtons';
 import Link from 'next/link';
 
-export default function Login() {
+export default function Continue() {
     return (
         <main className='flex h-dvh items-center justify-center p-10'>
             <section className='max-w-md w-full text-center'>
@@ -10,7 +10,7 @@ export default function Login() {
                 <h1 className='text-3xl font-bold text-zinc-50'>
                     Yoruverse <span className='text-indigo-400'>Account</span>
                 </h1>
-                <p>Connect with your apps across the Yoruverse</p>
+                <p className='text-balance'>Connect with your apps across the Yoruverse</p>
                 <p className='w-full flex items-center gap-2.5 truncate mb-5 mt-10'>
                     <span className='w-full h-px bg-zinc-700' />
                     Continue with
